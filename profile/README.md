@@ -41,6 +41,11 @@
 
 ![파테크_구현모습_수정본](https://github.com/withoutsultang/Raspberry_Project/assets/113170868/65f29a88-d3ff-4b38-8a1b-3bb6a6e0f8e2)
 
+
+# ⚙️ 시스템 흐름도
+
+![smartdaepa_chart](https://github.com/smart-daepa/.github/assets/120733105/e9495e9a-9e76-400f-9cab-6e3276cb0c1e)
+
    
 # 👨🏻‍💻 INHATC 3학년 2학기 무선네트워크 1조
 <table>
