@@ -22,7 +22,15 @@
    10. 토양 : 대파 뿌리를 심을 때 필요.
    11. 대파 뿌리 : 대파를 키우는 것이 목적이므로 필요.
    12. 물 : 대파가 잘 자라려면 토양이 항상 적절히 촉촉하게 유지돼야 하므로 필요.
-   
+# 확인 필요한 재료
+   1. 온습도 센서
+   2. 조도 센서
+# 구매해야하는 것
+   1. 아두이노 워터 펌프 : https://m.eduino.kr/product/detail.html?product_no=984
+   2. 토양 수분감지 센서 모듈 : https://eduino.kr/product/detail.html?product_no=84&gad_source=1&gclid=Cj0KCQiAmNeqBhD4ARIsADsYfTf-WezOwrpHmkjXnWo13-KSgrxCWslWNDj-q-tiGj1VjCSWA2SA2-waAoSiEALw_wcB
+   3. 흙 : 다이소
+   4. 화분 : https://www.coupang.com/vp/products/72294667?itemId=241024909&vendorItemId=3593677979&q=화분&itemsCount=27&searchId=57ff756b726f43c19c86a9f26712ca19&rank=25&isAddedCart=
+   5. 식물 생장 LED : https://robomall.co.kr/product/식물생장-led-조명-핀타입/23042/category/43/display/1/
 
 # 🌱 대파를 잘 키우기 위한 조건
    1. 토양: 대파는 비옥하고 잘 배수되는 토양을 선호합니다. 토양의 pH는 약 6.0~7.0이 이상적입니다.
@@ -61,18 +69,25 @@
   <tbody>
     <tr>
       <tr>
-      <td align="center"><a href="https://github.com/withoutsultang"><img src="https://avatars.githubusercontent.com/u/120733105?v=4" width="100px;" alt=""/></td>
-      <td align="center"><a href="https://github.com/youngsoosoo"><img src="https://avatars.githubusercontent.com/u/87405853?v=4" width="100px;" alt=""/></td>
-      <td align="center"><a href="https://github.com/Kimsuji100"><img src="https://avatars.githubusercontent.com/u/113170868?v=4" width="100px;" alt=""/></td>
-      <td align="center"><a href="https://github.com/dlrkd"><img src="https://avatars.githubusercontent.com/u/35716755?v=4" width="100px;" alt=""/></td>
-      <td align="center"><a href="https://github.com/jys23"><img src="https://avatars.githubusercontent.com/u/113410132?v=4" width="100px;" alt=""/></td>
+        <td align="center">토양 수분 감지 및 워터 펌프</td>
+        <td align="center">온습도 센서(텔레그램)</td>
+        <td align="center">조도센서 빛의 양 확인(LED)</td>
+        <td align="center">파이카메라 스케쥴링</td>
+        <td align="center">데이터 베이스 저장</td>
       </tr>
       <tr>
-      <td align="center"><a href="https://github.com/withoutsultang">김건우</td>
-      <td align="center"><a href="https://github.com/youngsoosoo">박용수</td>
-      <td align="center"><a href="https://github.com/Kimsuji100">김수지</td>
-      <td align="center"><a href="https://github.com/dlrkd">이강현</td>
-      <td align="center"><a href="https://github.com/jys23">장용수</td>
+         <td align="center"><a href="https://github.com/withoutsultang"><img src="https://avatars.githubusercontent.com/u/120733105?v=4" width="100px;" alt=""/></td>
+         <td align="center"><a href="https://github.com/youngsoosoo"><img src="https://avatars.githubusercontent.com/u/87405853?v=4" width="100px;" alt=""/></td>
+         <td align="center"><a href="https://github.com/Kimsuji100"><img src="https://avatars.githubusercontent.com/u/113170868?v=4" width="100px;" alt=""/></td>
+         <td align="center"><a href="https://github.com/dlrkd"><img src="https://avatars.githubusercontent.com/u/35716755?v=4" width="100px;" alt=""/></td>
+         <td align="center"><a href="https://github.com/jys23"><img src="https://avatars.githubusercontent.com/u/113410132?v=4" width="100px;" alt=""/></td>
+      </tr>
+      <tr>
+         <td align="center"><a href="https://github.com/withoutsultang">김건우</td>
+         <td align="center"><a href="https://github.com/youngsoosoo">박용수</td>
+         <td align="center"><a href="https://github.com/Kimsuji100">김수지</td>
+         <td align="center"><a href="https://github.com/dlrkd">이강현</td>
+         <td align="center"><a href="https://github.com/jys23">장용수</td>
       </tr>
     </tr>
   </tbody>
