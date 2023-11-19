@@ -1,4 +1,4 @@
-# Raspberry_Project - RaspberryPi와 Arduino를 이용해 파테크 시작하기
+# Raspberry_Project - <br> RaspberryPi와 Arduino를 이용해 파테크 시작하기
 
 
 * * *
@@ -10,18 +10,74 @@
 이 프로젝트는 라즈베리 파이와 아두이노를 활용하여 대파의 자동 관리 시스템을 구축하는 것을 목표로 합니다. 일정 시간마다 대파에 물을 주는 기능과 함께, 대파의 성장 과정을 라즈베리 파이의 카메라를 통해 사용자가 실시간으로 관찰할 수 있도록 하는 기능을 개발할 예정입니다. 이를 통해, 바쁜 일상 속에서도 대파를 효과적으로 관리하고, 그 결과로 생활비 절약에 도움을 주는 '파테크'를 실현하고자 합니다.
 
 # 🛠️ 필요 재료
-   1. 파이 카메라(Pi Camera v2) : 대파의 성장을 일정 시간마다 카메라로 촬영 후 사용자에게 기록을 남겨주기 위해 필요.
-   2. 아두이노 토양 수분 감지 센서 모듈(YL-69) : 토양 내 수분함량에 따른 저항의 변화를 측정하는 센서로, 토양 내 수분함량에 따라 물의 공급 여부를 정하기 위해 필요. / 수분 함량이 높을 수록 저항 값 ↓
-   3. 아두이노(Uno) : 토양 수분 감지 센서 모듈의 아날로그 값과 워터 펌프를 통해 대파에 수분을 공급하는 명령을 위해 필요.
-   4. 아두이노 워터 펌프(JT-180A) : 대파에 수분을 공급하기 위해 필요.
-   5. 라즈베리 파이(3 B+) : 전체 시스템의 중앙 처리 장치로 사용하기 위해 필요.
-   6. 조도 센서(Cds) : 빛의 양에 따라 전도율이 변하는 가변 저항 센서로, 화분 주변의 밝기를 측정하여 빛의 양을 측정하기 위해 필요. / 빛의 양이 적으면 저항 값 ↑
-   7. 식물 생장 LED : 부족한 광합성을 보충과 LED 작동을 위해 필요.
-   8. 온습도 센서(DHT11) : 온도와 습도를 측정해 사용자에게 텔레그램 메시지를 전달해주기 위해 필요. / 측정 습도 : 20 ~ 90%, 측정 온도 : 0 ~ 50℃
-   9. 화분 : 대파를 키우기 위한 공간 및 환경을 제공하기 위해 필요.
-   10. 토양 : 대파 뿌리를 심을 때 필요.
-   11. 대파 뿌리 : 대파를 키우는 것이 목적이므로 필요.
-   12. 물 : 대파가 잘 자라려면 토양이 항상 적절히 촉촉하게 유지돼야 하므로 필요.
+<table style="width: 100%; border-collapse: collapse;">
+  <tr style="background-color: lightgray;">
+    <th style="border: 1px solid black; padding: 8px; text-align: center;">필요 재료</th>
+    <th style="border: 1px solid black; padding: 8px; text-align: center;">제품명</th>
+    <th style="border: 1px solid black; padding: 8px; text-align: center;">설명</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">파이 카메라</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">Pi Camera v2</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">대파의 성장을 일정 시간마다 카메라로 촬영 후 사용자에게 기록을 남겨주기 위해 필요.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">아두이노 토양 수분 감지 센서 모듈</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">YL-69</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">토양 내 수분함량에 따른 저항의 변화를 측정하는 센서로, 물의 공급 여부를 판단하기 위해 필요. / 수분 함량이 높을수록 저항 값 ↓</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">아두이노</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">Uno</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">토양 수분 감지 센서 모듈의 아날로그 값과 워터 펌프를 통해 대파에 수분을 공급하는 명령을 위해 필요.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">아두이노 워터 펌프</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">아두이노 워터펌프 모터 3~5V </td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">대파에 수분을 공급하기 위해 필요.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">라즈베리 파이</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">3 B+</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">전체 시스템의 중앙 처리 장치로 사용하기 위해 필요.      </td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">조도 센서</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">Cds</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">빛의 양에 따라 전도율이 변하는 가변 저항 센서로, 화분 주변의 밝기를 측정하여 빛의 양을 측정하기 위해 필요. / 빛의 양이 적으면 저항 값 ↑</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">식물 생장 LED</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">-</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">부족한 광합성을 보충과 LED 작동을 위해 필요.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">온습도 센서</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">DHT11</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;"> 온도와 습도를 측정해 사용자에게 텔레그램 메시지를 전달해주기 위해 필요. / 측정 습도 : 20 ~ 90%, 측정 온도 : 0 ~ 50℃</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">화분</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">-</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">대파를 키우기 위한 공간 및 환경을 제공하기 위해 필요.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">토양</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">-</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">대파 뿌리를 심을 때 필요.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">대파 뿌리</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">-</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">대파를 키우는 것이 목적이므로 필요.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">물</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">-</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">대파가 잘 자라려면 토양이 항상 적절히 촉촉하게 유지돼야 하므로 필요.</td>
+  </tr>
+</table>
+
 # 확인 필요한 재료
    1. 온습도 센서
    2. 조도 센서
@@ -69,11 +125,11 @@
   <tbody>
     <tr>
       <tr>
-        <td align="center">토양 수분 감지 및 워터 펌프</td>
-        <td align="center">온습도 센서(텔레그램)</td>
-        <td align="center">조도센서 빛의 양 확인(LED)</td>
-        <td align="center">파이카메라 스케쥴링</td>
-        <td align="center">데이터 베이스 저장</td>
+        <td align="center">토양 수분 감지 및<br>워터 펌프</td>
+        <td align="center">온습도 센서<br>(텔레그램)</td>
+        <td align="center">조도센서 빛의 양 확인<br>(LED)</td>
+        <td align="center">파이카메라<br> 스케쥴링</td>
+        <td align="center">데이터 베이스<br> 저장</td>
       </tr>
       <tr>
          <td align="center"><a href="https://github.com/withoutsultang"><img src="https://avatars.githubusercontent.com/u/120733105?v=4" width="100px;" alt=""/></td>
@@ -83,11 +139,11 @@
          <td align="center"><a href="https://github.com/jys23"><img src="https://avatars.githubusercontent.com/u/113410132?v=4" width="100px;" alt=""/></td>
       </tr>
       <tr>
-         <td align="center"><a href="https://github.com/withoutsultang">김건우</td>
-         <td align="center"><a href="https://github.com/youngsoosoo">박용수</td>
-         <td align="center"><a href="https://github.com/Kimsuji100">김수지</td>
-         <td align="center"><a href="https://github.com/dlrkd">이강현</td>
-         <td align="center"><a href="https://github.com/jys23">장용수</td>
+         <td align="center"><a href="https://github.com/withoutsultang">김건우<br>(withoutsultang)</td>
+         <td align="center"><a href="https://github.com/youngsoosoo">박용수<br>(youngsoosoo)</td>
+         <td align="center"><a href="https://github.com/Kimsuji100">김수지<br>(Kimsuji100)</td>
+         <td align="center"><a href="https://github.com/dlrkd">이강현<br>(dlrkd)</td>
+         <td align="center"><a href="https://github.com/jys23">장용수<br>(jys23)</td>
       </tr>
     </tr>
   </tbody>
