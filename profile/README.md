@@ -117,7 +117,8 @@
 
 # ⚙️ 시스템 흐름도
 
-![smartdaepa_chart](https://github.com/smart-daepa/.github/assets/120733105/e9495e9a-9e76-400f-9cab-6e3276cb0c1e)
+![Group 19](https://github.com/smart-daepa/.github/assets/120733105/0ec60f95-8872-4d43-bac8-2c9c1c920174)
+
 
    
 # 👨🏻‍💻 INHATC 3학년 2학기 무선네트워크 1조
